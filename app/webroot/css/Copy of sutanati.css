@@ -1,0 +1,713 @@
+/* Global Styles */
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+/* ------------------------------- */
+
+body {
+	font-family: "Lato",sans-serif;
+	font-size: 14px;
+	color: #313131;
+	line-height: 1.5em;
+	overflow-x: hidden
+}
+h1, h2, h3, h4,h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	margin-top: 0;
+}
+ul, ol {
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+	line-height: 1.5em;
+}
+
+a:hover, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	color: #FFC000;
+}
+
+/* container */
+.container {
+}
+
+/*first child of #page-content so it doesn't shift around*/
+.no-margin-top {
+	margin-top: 0px !important
+}
+/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
+#page-content {
+	position: relative;
+	left: 0;
+	margin-top: 60px;
+}
+#page-content.slide-active {
+	padding-top: 0
+}
+
+/* top menu */
+.site-header-navbar {
+    /*background: url("../img/top-header-bg.png") repeat-x scroll left top rgba(0, 0, 0, 0);*/
+   background-color: #FFF;
+   height: 44px;
+   left: 0;
+   width: 100%;
+   z-index: 2;
+}
+.site-header-navbar ul {
+	margin-left: -60px;
+}
+.site-header-navbar li {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+
+.site-header-navbar li a {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 42px;
+    padding: 0 10px;
+    text-decoration: none;
+    transition-duration: 0.1s;
+    vertical-align: top;
+}
+
+
+/*--- DROPDOWN ---*/
+.site-header-navbar ul.language-dropdown {
+	/*background: url("../img/top-header-bg.png") repeat-x scroll left top rgba(0, 0, 0, 0);*/
+	list-style:none;
+	position:absolute;
+	left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	margin-left: -20px;
+	z-index: 99;
+}
+.site-header-navbar ul.language-dropdown li {
+	padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	margin-left: -30px;
+	float:none;
+}
+.site-header-navbar ul.language-dropdown a {
+	white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+    line-height: 16px;
+    height: 18px;
+}
+.site-header-navbar li:hover ul.language-dropdown { /* Display the dropdown on hover */
+	left: 0; /* Bring back on-screen when needed */
+}
+.site-header-navbar li:hover ul.language-dropdown a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration: none;
+}
+.site-header-navbar li:hover ul.language-dropdown li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+}
+
+
+/* put toggle bars on the left :: not using button */
+#slide-nav .navbar-toggle {
+	cursor: pointer;
+	position: relative;
+	line-height: 0;
+	float: left;
+	margin: 0;
+	width: 30px;
+	height: 40px;
+	padding: 0 7px 7px 0;
+	border: 0;
+	background: transparent;
+}
+/* icon bar prettyup - optional */
+#slide-nav .navbar-toggle > .icon-bar {
+	width: 100%;
+	display: block;
+	height: 5px;
+	margin: 5px 0 0 0;
+}
+#slide-nav .navbar-toggle.slide-active .icon-bar {
+	background: #FFC90E
+}
+.navbar {
+	height: 60px;
+	margin-bottom: 0;
+	border-width: 0;
+	border-radius: 0;
+}
+.navbar-default {
+    background-color: #FFF;/*#423F40;*/
+    border-color: #FFF;/*#423F40;*/
+}
+.navbar-header {
+	position: relative;
+	top: 12px;
+}
+.navbar .navbar-brand {
+    color: #fff;
+    font-size: 18px;
+    height: auto;
+    line-height: 48px;
+    margin-left: 0 !important;
+    margin-right: 0;
+    max-width: none;
+    overflow-x: hidden;
+    padding: 0;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-shadow: 0 1px 0 #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    width: 216px;
+}
+.navbar-brand > img {
+    display: inline;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  	color: #FFC200;
+  	background-color: transparent;
+}
+/* un fix the navbar when active so that all the menu items are accessible */
+.navbar.navbar-fixed-top.slide-active {
+	position: relative;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFC200;
+}
+.navbar .navbar-nav {
+    margin-left: 0;
+    margin-right: 0 !important;
+    padding-bottom: 0;
+    padding-top: 9px;
+}
+.navbar .navbar-nav > li > a {
+    border-radius: 0;
+}
+.navbar .divider-vertical {
+    border-left: 1px solid #4d7496;
+    border-right: 1px solid #fff;
+    height: 48px;
+}
+.navbar .nav > li {
+    line-height: 28px;
+    font-weight: 600;
+}
+.navbar .nav > li:first-child {
+	
+}
+.navbar .nav > li.nav-toggle {
+    display: none;
+}
+.navbar .nav > li:active, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .navbar .toggle-sidebar:active {
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+}
+.navbar .nav > li > a {
+    /*color: #fff;*/
+    font-size: 14px;
+    padding: 10px;
+}
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+    background-color: transparent;
+    color: #FFF;
+}
+.navbar .nav > li > a > span {
+    padding-left: 5px;
+}
+.navbar .nav > li > a .badge {
+    background-color: rgba(219, 45, 42, 0.8);
+    font-size: 10px;
+    font-weight: 300;
+    height: 14px;
+    padding: 2px 4px;
+    position: absolute;
+    right: 8px;
+    text-align: center;
+    text-shadow: none;
+    top: 8px;
+}
+
+
+.dropdown-menu {
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    font-size: 14px;
+    text-align: left;
+}
+.dropdown-menu > li > a > i, .dropdown-menu > li > i {
+    margin-right: 5px;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background: none repeat scroll 0 0 #4d7496;
+    color: #FFF;
+    filter: none;
+}
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #4d7496;
+}
+
+.dropdown-submenu {
+	position:relative;
+}
+.dropdown-submenu > .dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-top: -6px;
+	margin-left: -1px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+.dropdown-submenu > a:after {
+	display:block;
+	content:" ";
+	float:right;
+	width:0;
+	height:0;
+	border-color:transparent;
+	border-style:solid;
+	border-width:5px 0 5px 5px;
+	border-left-color: #555;
+	margin-top:5px;
+	margin-right:-10px;
+}
+.dropdown-submenu:hover > a:after {
+	border-left-color: #FFF;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+	background-color: transparent;
+	color: #FFF;
+}
+
+.dropdown-submenu.pull-left {
+	float:none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+	left: -100%;
+	margin-left: 10px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+#fullpage-sidemenu {
+	background-color: #EEE;
+}
+#fullpage-sidemenu > ul {
+	margin-left: -40px;
+}
+
+#fullpage-sidemenu > ul > li {
+	line-height: 2em;
+	display: block;
+}
+
+.breadcrumb {
+	background-color: #FFF;
+	font-size:85%;
+	margin-bottom: 8px;
+}
+
+.page-header {
+    border-bottom: none;
+    margin: 0 0 8px 15px;
+    padding-bottom: 0;
+}
+
+#odisha_map {
+    width:	100%;
+    height:	480px;
+    border: 8px solid #EEE;
+}
+.gm-style-iw * {
+    display: block;
+    width: 320px;
+    padding: 0;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+.light-blue {
+	background-color: #0094D8;
+	color: #FFF;
+	padding: 3em 0 1.5em;
+}
+.dark-blue {
+	background-color: #0086C3;
+	color: #FFF;
+	padding: 1em 0;
+	font-size: 85%;
+}
+.dark-blue a {
+	color: #FFF;
+}
+.footer .quick-info {
+	width: 80%;
+}
+.footer .quick-info h3 {
+	color: #FFF;
+	font-weight: 900;
+}
+.footer .quick-info ul.quick-info-item {
+	margin-left: -40px;
+}
+.footer .quick-info ul>li {
+	line-height: 32px;
+	font-size: 14px;
+}
+.footer .quick-info ul.quick-info-item >li>a, .footer .quick-info ul.quick-info-item >li>a:hover {
+	color: #222;
+}
+.footer .quick-info ul.social-network {
+	margin-left: -24px;
+	color: #FFC000;
+}
+ul.social-network li.facebook:before {    
+	font-family: 'FontAwesome';
+	content: '\f09a';
+	margin:	0 5px 0 -15px;
+	color: #FFC000;
+}
+ul.social-network li.twitter:before {    
+	font-family: 'FontAwesome';
+	content: '\f099';
+	margin:	0 5px 0 -15px;
+	color: #FFC000;
+}
+ul.social-network li.googleplus:before {    
+	font-family: 'FontAwesome';
+	content: '\f0d5';
+	margin:	0 5px 0 -15px;
+	color: #FFC000;
+}
+ul.social-network li.instagram:before {    
+	font-family: 'FontAwesome';
+	content: '\f16d';
+	margin:	0 5px 0 -15px;
+	color: #FFC000;
+}
+ul.social-network li.youtube:before {    
+	font-family: 'FontAwesome';
+	content: '\f167';
+	margin:	0 5px 0 -15px;
+	color: #FFC000;
+}
+ul.social-network li a {
+	color: #FFC000;
+}
+.tripadvisor {
+	text-align: right;
+	color: #DDDDDD;
+}
+.copyright {
+    background: url("../img/top-header-bg.png") repeat-x scroll left top rgba(0, 0, 0, 0);
+    min-height: 44px;
+    width: 100%;
+    font-size: 80%;
+    color: #AAAAAA;
+    line-height: 24px;
+    z-index: 2;
+}
+
+.carousel-control.left {
+    background-image: none;
+}
+.carousel-control.right {
+    background-image: none;
+}
+.header-container {
+    position: relative;
+}
+
+.section-header {
+	font-size: 72px;
+	font-weight: 900;
+	color: #FFF;
+	margin-top: 24px;
+}
+.section-header span {
+	font-weight: 100;
+}
+.section-sub-header {
+	font-size: 28px;
+	font-weight: 700;
+}
+.section-content {
+	font-size: 20px;
+	line-height: 36px;
+}
+.activity-section {
+	margin-bottom: 20px;
+	border-bottom: 2px solid #00B0F2;
+}
+.activity-section p {
+	padding: 20px 0;
+}
+.category-title {
+	color: #00B0F2;
+	cursor: pointer;
+}
+.category-list {
+	margin: 0 0 20px -10px;
+	text-align: left;
+}
+.category-list li {
+	line-height: 24px;
+}
+.category-list li:before {    
+	font-family: 'FontAwesome';
+	content: '\f138';
+	margin:	0 5px 0 -15px;
+	color: #337ab7;
+}
+.newsletter {
+	color: #FFF;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
+	margin: 20px 0;
+}
+.newsletter span {
+	font-weight: 900;
+}
+#newsletter-signup .form-control:focus {
+	border-color: #FFF;
+	box-shadow: none;
+}
+#newsletter-signup input {
+	border-radius: 8px 0 0 8px;
+	font-family: "Lato",sans-serif;
+	font-weight: 300;
+    font-size: 22px;
+    height: 48px;
+    line-height: 1.3;
+    padding: 10px 16px;
+}
+#newsletter-signup button {
+	border-radius: 0 8px 8px 0;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 400;
+    font-size: 22px;
+    height: 48px;
+    line-height: 1.3;
+    background-color: #423F40;
+    color: #EFEFEF;
+    font-weight: 100;
+}
+
+/* textured bg */
+.distress-top {
+	background: url("../img/texture-top-lg.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 18px;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.distress-bottom {
+	background: url("../img/texture-bottom-lg.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 18px;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.light-blue-bg {
+	background: url("../img/light-blue-bg.png") repeat scroll left top #48a9c5;
+}
+.brown-bg {
+	background: url("../img/brown-bg.png") repeat scroll left top #48a9c5;
+}
+.green-bg {
+	background: url("../img/green-bg.png") repeat scroll left top #48a9c5;
+}
+/* padding */
+.top-padding {
+	padding-top: 10px;
+}
+.right-padding {
+	padding-right: 10px;
+}
+.bottom-padding {
+	padding-bottom: 10px;
+}
+.left-padding {
+	padding-left: 10px;
+}
+.no-padding {
+	padding: 0;
+}
+.top-padding-20 {
+	padding-top: 20px;
+}
+.top-padding-30 {
+	padding-top: 30px;
+}
+.top-padding-40 {
+	padding-top: 40px;
+}
+.bottom-padding-20 {
+	padding-bottom: 20px;
+}
+.bottom-padding-30 {
+	padding-bottom: 30px;
+}
+.bottom-padding-40 {
+	padding-bottom: 40px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
+@media (max-width: 767px) {
+	.slide-active #page-content {
+		margin-top: 0;
+	}
+	.navbar .nav > li > a {
+	    color: #555;
+	    font-size: 13px;
+	    padding: 10px 18px;
+	}
+	.navbar .nav > li {
+	    border-right: none;
+	    line-height: 28px;
+	}
+	.navbar .nav > li:first-child {
+	    border-left: none;
+	}
+	#slide-nav .container {
+		margin: 0;
+		padding: 0 !important;
+	}
+	#slide-nav .navbar-header {
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	#slide-nav .navbar.slide-active {
+		position: absolute;
+		width: 80%;
+		top: -1px;
+		z-index: 1000;
+	}
+	#slide-nav #slidemenu {
+		background: #f7f7f7;
+		left: -100%;
+		width: 80%;
+		min-width: 0;
+		position: absolute;
+		padding-left: 0;
+		z-index: 99;
+		top: 0;
+		margin: 0;
+		border-top: 12px solid #423F40;
+	}
+	#slide-nav #slidemenu .navbar-nav {
+		min-width: 0;
+		width: 100%;
+		margin: 0;
+	}
+	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
+		min-width: 0;
+		width: 99%;
+		white-space: normal;
+	}
+	#slide-nav {
+		border-top: 0
+	}
+	#slide-nav.navbar-inverse #slidemenu {
+		background: #333
+	}
+	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
+	#slide-nav #navbar-height-col {
+		position: fixed;
+		top: 0;
+		height: 100%;
+		width: 80%;
+		left: -80%;
+		background: #eee;
+	}
+	#slide-nav.navbar-inverse #navbar-height-col {
+		background: #333;
+		z-index: 1;
+		border: 0;
+	}
+	#slide-nav .navbar-form {
+		width: 100%;
+		margin: 8px 0;
+		text-align: center;
+		overflow: hidden;
+		/*fast clearfixer*/
+	}
+	#slide-nav .navbar-form .form-control {
+		text-align: center
+	}
+	#slide-nav .navbar-form .btn {
+		width: 100%
+	}
+	
+	#slidemenu li.open ul.dropdown-menu {
+		background-color: #E9ECF2;
+	}
+	
+	#slidemenu li.open ul.dropdown-menu li.open ul.dropdown-menu {
+		background-color: #F1F4F7;
+	}
+	
+	#fullpage-sidemenu {
+		display: none;
+	}
+	
+	.section-header {
+		font-size: 32px;
+		font-weight: 600;
+	}
+	
+	.section-sub-header {
+		font-size: 16px;
+	}
+	.section-content {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.copyright {
+	    min-height: 44px;
+	    line-height: 14px;
+	}
+	#odisha_map {
+	    width:	100%;
+	    height:	240px;
+	}
+}
+@media (min-width: 768px) {
+	#page-content {
+		left: 0 !important;
+	}
+	.navbar.navbar-fixed-top.slide-active {
+		position: fixed
+	}
+	.navbar-header {
+		left: 0 !important
+	}
+	/* Make Navigation Toggle on Desktop Hover */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+	.category-list {
+		min-height: 260px;
+	}
+	
+}

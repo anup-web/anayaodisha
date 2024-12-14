@@ -1,0 +1,459 @@
+/* Global Styles */
+@import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+/* ------------------------------- */
+
+body {
+	position: relative;
+	width: 100%;
+	background: #fff;
+	color: #444a53;
+	line-height: 166%;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	text-rendering: optimizelegibility;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+h1, h2, h3, h4,h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	color: #494949;
+	margin-top: 0;
+}
+ul, ol {
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+	line-height: 1.5em;
+}
+
+a {
+	color: #1F5FA1;
+	transition: all 0.25s ease-in-out;
+  	-webkit-transition: all 0.25s ease-in-out;
+  	-moz-transition: all 0.25s ease-in-out;
+}
+a:hover, a:visited {
+	text-decoration: none;
+}
+a:hover {
+	color: #FFC000;
+}
+
+.social-links {
+	float: right;
+	margin: 2px 4px 0 0;
+}
+.social-links a {
+	color: #FFC000;
+	transition: all 0.25s ease-in-out;
+  	-webkit-transition: all 0.25s ease-in-out;
+  	-moz-transition: all 0.25s ease-in-out;	
+  	margin-right: 8px;
+}
+.social-links a:hover {
+	color: #93CD4A;
+}
+
+#google_translate_element {
+	float: right;
+	display: inline;
+}
+
+/******* navigation menu *********/
+#navbar {
+	margin-top: 40px;
+}
+.navbar {
+    border: none;
+    margin-bottom: 0;
+}
+.navbar-default {
+	background-color: transparent;
+    border: none;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #043174;
+    font-weight: 600;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: transparent;
+    color: #1F81E1;
+}
+.navbar-brand {
+	padding: 9px 15px;	
+}	
+.navbar-toggle {
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 0;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 12px;
+    margin-top: 0;
+    padding: 9px 10px;
+    position: relative;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FFF;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #197DE0;
+}
+.navbar-nav {
+	background-color: rgba(255, 255, 255,0.40);
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: transparent;
+    color: #555;
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: transparent;
+    border: none;
+}
+
+.top-nav-collapse {
+    padding: 0;
+    background-color: rgba(226, 226, 216, 0.98);
+    transition: all 0.25s ease-in-out;
+  	-webkit-transition: all 0.25s ease-in-out;
+  	-moz-transition: all 0.25s ease-in-out;
+    opacity: 1;
+}
+
+.top-nav-collapse .navbar-nav {
+	background-color: rgba(255, 255, 255, 0);
+}
+    
+.destinations .dropdown-menu {
+	border: 6px solid #F833C6;	
+}
+
+.attractions .dropdown-menu {
+	border: 6px solid #ED0606;	
+}
+
+.thingstodo .dropdown-menu {
+	border: 6px solid #FFC000;	
+}
+
+.traveltoodisha .dropdown-menu {
+	border: 6px solid #93CD4A;	
+}
+
+.helpnadvice .dropdown-menu {
+	border: 6px solid #00B0F2;	
+}
+
+.stpl .nav,
+.stpl .collapse,
+.stpl .dropup,
+.stpl .dropdown {
+  	position: static;
+}
+.stpl .container {
+  	position: relative;
+}
+.stpl .dropdown-menu {
+  	left: auto;
+  	width: 100%;
+	border-radius: 0;
+}
+.stpl .stpl-content {
+  	padding: 20px 30px;
+}
+.stpl .dropdown.stpl-fw .dropdown-menu {
+  	left: 0;
+  	right: 0;
+}
+
+
+/******* page content *********/
+#page-content {
+	margin-top: 0;
+	position: relative;
+	top: 0;
+}
+
+.image-scroller {
+	position: relative;
+}
+
+.image-scroller-txt {
+	position: absolute;
+	bottom: 0;
+	right: 120px;
+}
+
+.image-scroller-txt h2 {
+	font-size: 72px;
+	color: #FFF;
+	padding: 10px;
+	margin-bottom: 0;
+	width: auto;
+}
+
+.image-scroller-txt h3 {
+	font-size: 42px;
+	color: #FFF;
+	padding: 14px;
+	margin-bottom: 0;
+	font-weight: 100;
+}
+
+#cycler{position:relative;}
+#cycler img{position:absolute;z-index:1}
+#cycler img.active{z-index:3}
+
+/***** header *****/
+.header-container {
+    position: relative;
+}
+
+.section-header {
+	font-size: 72px;
+	font-weight: 900;
+	color: #FFF;
+	margin-top: 24px;
+}
+.section-header span {
+	font-weight: 100;
+}
+span.section-header-small {
+	font-size: 65%;
+}
+.section-sub-header {
+	font-size: 28px;
+	font-weight: 700;
+}
+.section-content {
+	font-size: 20px;
+	line-height: 36px;
+}
+
+/*******blockquote********/
+.mb-wrap {
+    margin: 10px auto;
+    padding: 0;
+    position: relative;
+}
+
+.mb-wrap blockquote {
+    border-left: none;
+    margin: 0;
+}  
+.mb-style-2 blockquote{
+	padding-top: 120px;
+}
+
+.mb-style-2 blockquote:after {
+	background: url("../img/brand-ambassador.png") no-repeat center;
+	width: 99px;
+	height: 99px;
+	border: 6px solid #F00;
+	border-radius: 50%;
+	position: absolute;
+	text-align: center;
+	top: 0px;
+	left: 50%;
+	margin-left: -65px;
+	color: rgba(255,255,255,0.5);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.mb-style-2 blockquote:before{
+	content: '';
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	border-left: 5px solid rgba(235,150,108,0.1);
+	position: absolute;
+	top: 0px;
+	left: -10px;
+	z-index: -1;
+}
+
+.mb-style-2 blockquote p {
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-style: italic;
+	display: inline;
+	color: rgba(235,150,108,0.8);
+	text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+	line-height: 24px;
+}
+
+.mb-style-2 .mb-attribution {
+	text-align: right;
+}
+
+.mb-style-2 .mb-author{
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 10px;
+	margin: 0;
+	font-weight: bold;
+	color: #d48158;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.mb-style-2 cite {
+	font-size: 12px;
+	color: #d7aa94;
+	font-style: italic;
+}
+
+.youtube-container {
+	text-align: right;	
+}
+
+
+/* textured bg */
+.distress-top {
+	background: url("../img/texture-top-lg.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 18px;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.distress-bottom {
+	background: url("../img/texture-bottom-lg.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 18px;
+    left: 0;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.light-blue-bg {
+	background: url("../img/light-blue-bg.png") repeat scroll left top #48a9c5;
+}
+.brown-bg {
+	background: url("../img/brown-bg.png") repeat scroll left top #48a9c5;
+}
+.green-bg {
+	background: url("../img/green-bg.png") repeat scroll left top #48a9c5;
+}
+
+/* padding */
+.top-padding {
+	padding-top: 10px;
+}
+.right-padding {
+	padding-right: 10px;
+}
+.bottom-padding {
+	padding-bottom: 10px;
+}
+.left-padding {
+	padding-left: 10px;
+}
+.no-padding {
+	padding: 0;
+}
+.top-padding-20 {
+	padding-top: 20px;
+}
+.top-padding-30 {
+	padding-top: 30px;
+}
+.top-padding-40 {
+	padding-top: 40px;
+}
+.bottom-padding-20 {
+	padding-bottom: 20px;
+}
+.bottom-padding-30 {
+	padding-bottom: 30px;
+}
+.bottom-padding-40 {
+	padding-bottom: 40px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+	#navbar {
+		display: none;
+	}
+	.navbar-brand {
+	    padding: 2px 4px;
+	}
+	.navbar-brand img {
+		width: 48px;
+	}
+	.social-links, #google_translate_element {
+		display: none;
+	}
+	#page-content {
+		margin-top: 0;
+	}
+
+	.image-scroller-txt {
+	    right: 20px;
+	}
+	.image-scroller-txt h2 {
+		font-size: 32px;
+		color: #FFF;
+		padding: 0 0 0 4px;
+		margin-bottom: 0;
+		width: auto;
+	}
+	.image-scroller-txt h3 {
+		font-size: 18px;
+		color: #FFF;
+		padding: 2px 6px;
+		font-weight: 100;
+	}
+	.section-header {
+		font-size: 32px;
+		font-weight: 600;
+	}
+	.section-sub-header {
+		font-size: 16px;
+	}
+	.section-content {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+
+@media (max-width: 480px) {
+	.image-scroller-txt {
+	    right: 20px;
+	}
+	.image-scroller-txt h2 {
+		font-size: 16px;
+		color: #FFF;
+		padding: 0 0 0 4px;
+		margin-bottom: 0;
+		width: auto;
+	}
+	
+	.image-scroller-txt h3 {
+		font-size: 11px;
+		color: #FFF;
+		padding: 2px 6px;
+		font-weight: 100;
+	}
+}
